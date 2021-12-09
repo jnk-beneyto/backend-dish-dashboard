@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=production node ./index.js",
-    "test_old": "NODE_ENV=test ./node_modules/.bin/jest --forceExit",
+    "test_old": "NODE_ENV=test ./node_modules/.bin/jest --watch --runInBand",
     "test": "NODE_ENV=test ./node_modules/.bin/jest --forceExit --coverage && coveralls < coverage/lcov.info",
     "dev": "NODE_ENV=development nodemon ./index.js"
   },
@@ -13,16 +13,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "helmet": "^4.6.0",
-    "mongoose": "^6.1.0"
+    "cors": "2.8.5",
+    "dotenv": "10.0.0",
+    "express": "4.16.4",
+    "helmet": "4.6.0",
+    "mongoose": "5.3.16"
   },
   "devDependencies": {
-    "coveralls": "^3.1.1",
-    "jest": "^27.4.3",
-    "nodemon": "^2.0.15",
-    "supertest": "^6.1.6"
+    "@types/mongoose": "5.11.97",
+    "coveralls": "3.1.1",
+    "jest": "23.6.0",
+    "nodemon": "2.0.15",
+    "supertest": "3.4.1"
   }
 }
