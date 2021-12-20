@@ -8,7 +8,7 @@ if (process.env.NODE_ENV ==='test'){
   dbURI = process.env.DB_TEST
 }
 if (process.env.NODE_ENV ==='production'){
-  dbURI = process.env.DB_PROD
+  dbURI = process.env.DB_DEV
 }
 
 module.exports = {
