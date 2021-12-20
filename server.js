@@ -2,6 +2,7 @@ const helmet = require('helmet')
 const mongoose = require('mongoose')
 const cors = require('cors')
 const express = require("express")
+const bodyParser = require('body-parser')
 const app = express()
 const {
     DB
@@ -12,11 +13,10 @@ const {
 
 
 //middlewares
-
-app.use(express.json())
-app.use(helmet())
 app.use(cors())
-
+app.use(helmet())
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
 mongoose.Promise = global.Promise
 
 //Welcoming route
